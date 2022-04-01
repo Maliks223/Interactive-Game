@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* For variables */
+:root {
+  --primary-color: rgb(0, 0, 0);
+}
+
+/* Container of the hole page */
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+/* options style */
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* each option by itself */
+.option {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 10px;
+}
+
+/* option after hover */
+.option:hover {
+  border: 1px solid black;
+}
+
+/* anchor style and background */
+.option a {
+  display: block;
+  width: 400px;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.option h3 {
+  text-align: center;
+}
+
+/* Displaying the unwanted sections */
+#living-room,
+#bedroom {
+  display: none;
+}
+
+/* home images */
+.home-option:nth-child(1) a {
+  background-image: url("../images/green-door.png");
+}
+.home-option:nth-child(2) a {
+  background-image: url("../images/red-door.png");
+}
+.home-option:nth-child(3) a {
+  background-image: url("../images/green-door.png");
+}
+
+/* kitchen images */
+.kitchen-option:nth-child(1) a {
+  background-image: url("../images/kitchen-cupboards.png");
+}
+.kitchen-option:nth-child(2) a {
+  background-image: url("../images/kitchen-refrigerator.png");
+}
+.kitchen-option:nth-child(3) a {
+  background-image: url("../images/kitchen-microwave.png");
+}
+
+.kitchen-options {
+  display: none;
+}
+
+/* bedroom images */
+.bedroom-option:nth-child(1) a {
+  background-image: url("../images/bedroom-bookshelf.png");
+}
+.bedroom-option:nth-child(2) a {
+  background-image: url("../images/bedroom-dressing-table.png");
+}
+.bedroom-option:nth-child(3) a {
+  background-image: url("../images/bedroom-bedside-table.png");
+}
+
+/* living room images */
+.bedroom-option:nth-child(1) a {
+  background-image: url("../images/living-room-sofa.png");
+}
+.bedroom-option:nth-child(2) a {
+  background-image: url("../images/living-room-table.png");
+}
+.bedroom-option:nth-child(3) a {
+  background-image: url("../images/living-room-tv-stand.png");
+}
