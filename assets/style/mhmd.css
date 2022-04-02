@@ -5,7 +5,7 @@
 
 /* For variables */
 :root {
-  --primary-color: rgb(0, 0, 0);
+  --primary-color: rgb(0, 0, 0); /* Not Completed */
 }
 
 /* Container of the hole page */
@@ -47,8 +47,9 @@
 
 /* Displaying the unwanted sections */
 #living-room,
-#bedroom {
-  display: none;
+#bedroom,
+#kitchen {
+  /* display: none; */
 }
 
 /* home images */
@@ -64,37 +65,33 @@
 
 /* kitchen images */
 .kitchen-option:nth-child(1) a {
-  background-image: url("../images/kitchen-cupboards.png");
+  background-image: url("../images/kitchen/kitchen-cupboards.png");
 }
 .kitchen-option:nth-child(2) a {
-  background-image: url("../images/kitchen-refrigerator.png");
+  background-image: url("../images/kitchen/kitchen-fridge.png");
 }
 .kitchen-option:nth-child(3) a {
-  background-image: url("../images/kitchen-microwave.png");
-}
-
-.kitchen-options {
-  display: none;
+  background-image: url("../images/kitchen/kitchen-dishwasher.png");
 }
 
 /* bedroom images */
 .bedroom-option:nth-child(1) a {
-  background-image: url("../images/bedroom-bookshelf.png");
+  background-image: url("../images/bedroom/bedroom-bookshelf.png");
 }
 .bedroom-option:nth-child(2) a {
-  background-image: url("../images/bedroom-dressing-table.png");
+  background-image: url("../images/bedroom/bedroom-drawer.png");
 }
 .bedroom-option:nth-child(3) a {
-  background-image: url("../images/bedroom-bedside-table.png");
+  background-image: url("../images/bedroom/bedroom-bedside-table.png");
 }
 
 /* living room images */
-.bedroom-option:nth-child(1) a {
-  background-image: url("../images/living-room-sofa.png");
+.living-room-option:nth-child(1) a {
+  background-image: url("../images/salon/salon-sofa1.png");
 }
-.bedroom-option:nth-child(2) a {
-  background-image: url("../images/living-room-table.png");
+.living-room-option:nth-child(2) a {
+  background-image: url("../images/salon/salon-table.png");
 }
-.bedroom-option:nth-child(3) a {
-  background-image: url("../images/living-room-tv-stand.png");
+.living-room-option:nth-child(3) a {
+  background-image: url("../images/salon/salon-tv-stand.png");
 }
