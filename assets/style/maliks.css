@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    background-color: black;
+    
+}
+ body h1{
+     margin-top: 10px;
+     text-align: center;
+     padding-bottom: 50px;
+     color: white;
+}
+ h3{
+   text-align: center;
+   color: white;
+}
+
+.house-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+}
+.img1{
+height: 550px;
+width: 500px;
+}
+.img2{
+  height: 550px;
+width: 500px;
+}
+.house-1, .house-2{
+border: 2px solid white;
+}
+@media (max-width:1024px){
+    .img1, .img2{
+        height: 200px;
+        width:200px;
+    }
+    .house-container{
+        margin-top: -30px;
+    }
+}
