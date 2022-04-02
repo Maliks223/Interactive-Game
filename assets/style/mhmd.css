@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* For variables */
+:root {
+  --primary-color: rgb(0, 0, 0); /* Not Completed */
+}
+
+/* Container of the hole page */
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+/* options style */
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* each option by itself */
+.option {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 10px;
+}
+
+/* option after hover */
+.option:hover {
+  border: 1px solid black;
+}
+
+/* anchor style and background */
+.option a {
+  display: block;
+  width: 400px;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.option h3 {
+  text-align: center;
+}
+
+/* Displaying the unwanted sections */
+#living-room,
+#bedroom,
+#kitchen {
+  /* display: none; */
+}
+
+/* home images */
+.home-option:nth-child(1) a {
+  background-image: url("../images/green-door.png");
+}
+.home-option:nth-child(2) a {
+  background-image: url("../images/red-door.png");
+}
+.home-option:nth-child(3) a {
+  background-image: url("../images/green-door.png");
+}
+
+/* kitchen images */
+.kitchen-option:nth-child(1) a {
+  background-image: url("../images/kitchen/kitchen-cupboards.png");
+}
+.kitchen-option:nth-child(2) a {
+  background-image: url("../images/kitchen/kitchen-fridge.png");
+}
+.kitchen-option:nth-child(3) a {
+  background-image: url("../images/kitchen/kitchen-dishwasher.png");
+}
+
+/* bedroom images */
+.bedroom-option:nth-child(1) a {
+  background-image: url("../images/bedroom/bedroom-bookshelf.png");
+}
+.bedroom-option:nth-child(2) a {
+  background-image: url("../images/bedroom/bedroom-drawer.png");
+}
+.bedroom-option:nth-child(3) a {
+  background-image: url("../images/bedroom/bedroom-bedside-table.png");
+}
+
+/* living room images */
+.living-room-option:nth-child(1) a {
+  background-image: url("../images/salon/salon-sofa1.png");
+}
+.living-room-option:nth-child(2) a {
+  background-image: url("../images/salon/salon-table.png");
+}
+.living-room-option:nth-child(3) a {
+  background-image: url("../images/salon/salon-tv-stand.png");
+}
