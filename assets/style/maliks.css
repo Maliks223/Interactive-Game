@@ -1,42 +1,156 @@
-*{
-    box-sizing: border-box;
-    background-color: black;
-    
-}
- body h1{
-     margin-top: 10px;
-     text-align: center;
-     padding-bottom: 50px;
-     color: white;
-}
- h3{
-   text-align: center;
-   color: white;
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
 }
 
-.house-container{
-    display: flex;
-    justify-content: space-evenly;
-    width: 70%;
-    margin: auto;
+/* For variables */
+:root {
+  --primary-color: rgb(141, 141, 141); /* Not Completed */
+  --secondary-color: rgb(200, 200, 200); /* Not Completed */
 }
-.img1{
-height: 550px;
-width: 500px;
+
+body {
+  background-image: linear-gradient(rgba(34, 34, 34, 1), rgba(50, 50, 50, 1));
+  padding: 1% 10%;
 }
-.img2{
-  height: 550px;
-width: 500px;
+
+body h1 {
+  padding: 10px;
+  text-align: center;
+  color: var(--primary-color);
 }
-.house-1, .house-2{
-border: 2px solid white;
+
+/* Container of the hole page */
+.container {
+  /* width: 72%; */
+  margin: auto;
 }
-@media (max-width:1024px){
-    .img1, .img2{
-        height: 200px;
-        width:200px;
-    }
-    .house-container{
-        margin-top: -30px;
-    }
+
+.option h3 {
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+/* options style */
+.options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* each option by itself */
+.option {
+  border: 1px solid var(--primary-color);
+  /* margin: 10px; */
+  padding: 1%;
+  transition: 0.2s ease-in-out all;
+}
+
+/* option after hover */
+.option:hover {
+  border: 1px solid black;
+}
+
+/* anchor style and background */
+.option a {
+  display: block;
+  width: 400px;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Displaying the unwanted sections */
+#houses,
+#home,
+#living-room,
+#bedroom,
+#kitchen {
+  /* display: none; */
+}
+
+/* houses images */
+.house-option:nth-child(1) a {
+  background-image: url("../images/houses/house2.png");
+}
+.house-option:nth-child(2) a {
+  background-image: url("../images/houses/hut.png");
+}
+
+/* home images */
+.home-option:nth-child(1) a {
+  background-image: url("../images/green-door.png");
+}
+.home-option:nth-child(2) a {
+  background-image: url("../images/red-door.png");
+}
+.home-option:nth-child(3) a {
+  background-image: url("../images/green-door.png");
+}
+
+/* kitchen images */
+.kitchen-option:nth-child(1) a {
+  background-image: url("../images/kitchen/kitchen-cupboards.png");
+}
+.kitchen-option:nth-child(2) a {
+  background-image: url("../images/kitchen/kitchen-fridge.png");
+}
+.kitchen-option:nth-child(3) a {
+  background-image: url("../images/kitchen/kitchen-dishwasher.png");
+}
+
+/* bedroom images */
+.bedroom-option:nth-child(1) a {
+  background-image: url("../images/bedroom/bedroom-bookshelf.png");
+}
+.bedroom-option:nth-child(2) a {
+  background-image: url("../images/bedroom/bedroom-drawer.png");
+}
+.bedroom-option:nth-child(3) a {
+  background-image: url("../images/bedroom/bedroom-bedside-table.png");
+}
+
+/* living room images */
+.living-room-option:nth-child(1) a {
+  background-image: url("../images/salon/salon-sofa1.png");
+}
+.living-room-option:nth-child(2) a {
+  background-image: url("../images/salon/salon-table.png");
+}
+.living-room-option:nth-child(3) a {
+  background-image: url("../images/salon/salon-tv-stand.png");
+}
+
+/* ipad screen */
+@media (max-width: 1100px) {
+  body h1 {
+    font-size: x-large;
+  }
+  body {
+    padding: 0;
+    padding-top: 10%;
+  }
+  .options {
+    justify-content: center;
+  }
+  .option {
+    margin: 2%;
+  }
+  .option a {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* phone screen */
+@media (max-width: 600px) {
+  .option a {
+    width: 150px;
+    height: 150px;
+  }
+  .options h3 {
+    font-size: medium;
+  }
 }

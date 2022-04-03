@@ -1,23 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maliks</title>
     <link rel="stylesheet" href="../assets/style/maliks.css">
-    <title>...</title>
 </head>
+
 <body>
-    <h1>Please choose a house</h1>
-    <div class="house-container">
-        <div class="house-1">
-            <img class="img1" src="../assets/images/houses/house2.png" alt="#">
-            <h3>First house</h3>
+    <!--
+        **************************************************************************************************************
+        **************************************************************************************************************
+        **************************************************************************************************************
+        *********************************CHECK THE IMAGES NAME AND FIND THEM******************************************
+        **************************************************************************************************************
+        **************************************************************************************************************
+        **************************************************************************************************************
+        ****************IDs FOR THE JS NOT THE CSS!!! EACH SECTION HAS IT'S OWN SHARED & PRIVATE CLASS****************
+        **************************************************************************************************************
+        **************************************************************************************************************
+        **************************************************************************************************************
+        **************EACH SHOULD CREATE HIS OWN HTML CSS (js later we'll see), FOR NOT GETTING CONFLICT**************
+        **************************************************************************************************************
+        **************************************************************************************************************
+        **************************************************************************************************************
+     -->
+    <div class="container">
+
+        <div id="houses" class="">
+            <h1>Please choose a house</h1>
+            <div class="options houses-options">
+                <div class="option house-option">
+                    <a href="#home"></a>
+                    <h3>The House</h3>
+                </div>
+                <div class="option house-option">
+                    <a href="#hut"></a>
+                    <h3>The Hut</h3>
+                </div>
+            </div>
         </div>
-        <div class="house-2">
-            <img class="img2" src="../assets/images/houses/hut.png" alt="#">
-            <h3>Second house</h3>
+        <!-- ******After choosing the House****** -->
+        <div id="home" class="options home-options">
+            <div class="option home-option">
+                <a href="#kitchen"></a>
+                <h3>Kitchen</h3>
+            </div>
+            <div class="option home-option">
+                <a href="#living-room"></a>
+                <h3>Living Room</h3>
+            </div>
+            <div class="option home-option">
+                <a href="#bedroom"></a>
+                <h3>Bedroom</h3>
+            </div>
+        </div>
+
+        <!-- ******After choosing the kitchen****** -->
+        <div id="kitchen" class="options kitchen-options">
+            <div class="option kitchen-option">
+                <a href="#kitchen-cupboards"></a>
+                <h3>cupboards</h3>
+            </div>
+            <div class="option kitchen-option">
+                <a href="#kitchen-refrigerator"></a>
+                <h3>refrigerator</h3>
+            </div>
+            <div class="option kitchen-option">
+                <a href="#kitchen-microwave"></a>
+                <h3>microwave</h3>
+            </div>
+        </div>
+
+        <!-- ******After choosing the bedroom****** -->
+        <div id="bedroom" class="options bedroom-options">
+            <div class="option bedroom-option">
+                <a href="#bedroom-bookshelf"></a>
+                <h3>Bookshelf</h3>
+            </div>
+            <div class="option bedroom-option">
+                <a href="#bedroom-dressing-table"></a>
+                <h3>Dressing table</h3>
+            </div>
+            <div class="option bedroom-option">
+                <a href="#bedroom-bedside-table"></a>
+                <h3>Beside table</h3>
+            </div>
+        </div>
+
+        <!-- ******After choosing the Living room****** -->
+        <div id="living-room" class="options living-room-options">
+            <div class="option living-room-option">
+                <a href="#living-room-sofa"></a>
+                <h3>sofa</h3>
+            </div>
+            <div class="option living-room-option">
+                <a href="#living-room-table"></a>
+                <h3>Table</h3>
+            </div>
+            <div class="option living-room-option">
+                <a href="#living-room-tv-stand"></a>
+                <h3>TV-Stand drawer</h3>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
