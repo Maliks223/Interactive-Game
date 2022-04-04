@@ -10,7 +10,6 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  // console.log(n);
   let i;
   const slides = document.querySelectorAll(".text");
   if (n == slides.length) {
@@ -28,12 +27,34 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "flex";
 }
 
-document.addEventListener("click", playAudio);
+let docClicks=0;
 
-function playAudio() {
-  let introAudio = document.getElementById("intro-audio");
-  introAudio.play();
+document.addEventListener("click", ()=>{
+  docClicks+=1;
+  if(docClicks==1){
+  playAudio('intro-audio');
+  }
+});
+
+function playAudio(audioId) {
+  let audio = document.getElementById(audioId);
+  audio.play();
+}
+
+function stopAudio(audioId){
+  let audio=document.getElementById(audioId);
+  audio.pause();
+  audio.currentTime = 0;
+}
+
+function goToHomeOptions(chosen_charcter){
+  document.getElementById("characters").style.display = "none";
+  document.getElementById("houses").style.display = "block";
+  stopAudio('intro-audio');
   document.removeEventListener("click", playAudio);
+  playAudio('tic-tac-audio');
+  document.querySelector('body').style.background = "none"
+  document.querySelector('body').style.backgroundColor = "rgba(0,0,0,0.9)"
 }
 
 //On start-btn click, go to the first step: Choose the character
@@ -44,10 +65,9 @@ startBtn.addEventListener("click", () => {
 });
 
 document.getElementById("boy-character").addEventListener("click", () => {
-  document.getElementById("characters").style.display = "none";
-  document.getElementById("houses").style.display = "block";
+  goToHomeOptions("tarry");
 });
+
 document.getElementById("girl-character").addEventListener("click", () => {
-  document.getElementById("characters").style.display = "none";
-  document.getElementById("houses").style.display = "block";
+  goToHomeOptions("mary");
 });
