@@ -2,96 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, width=device-width, height=device-height"> -->
+    <link rel="stylesheet" href="../assets/style/samar.css" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;300;400&display=swap"> -->
+    <script defer src="../assets/Javascript/samar.js"></script>
     <title>Interactive Story</title>
-    <link rel="stylesheet" href="../assets/style/index.css">
 </head>
 
 <body>
-    <!--
-        **************************************************************************************************************
-        **************************************************************************************************************
-        **************************************************************************************************************
-        *********************************CHECK THE IMAGES NAME AND FIND THEM******************************************
-        **************************************************************************************************************
-        **************************************************************************************************************
-        **************************************************************************************************************
-        ****************IDs FOR THE JS NOT THE CSS!!! EACH SECTION HAS IT'S OWN SHARED & PRIVATE CLASS****************
-        **************************************************************************************************************
-        **************************************************************************************************************
-        **************************************************************************************************************
-        **************EACH SHOULD CREATE HIS OWN HTML CSS (js later we'll see), FOR NOT GETTING CONFLICT**************
-        **************************************************************************************************************
-        **************************************************************************************************************
-        **************************************************************************************************************
-     -->
     <audio id="intro-audio">
         <source src="../assets/audios/price-of-freedom-33106.mp3" type="audio/mpeg" loop="loop" />
     </audio>
+    <audio id="tic-tac-audio">
+        <source src="../assets/audios/zapsplat_horror_musical_clock_ticking_tick_tock_dark_sinister_80437.mp3"
+            type="audio/mpeg" loop="loop" />
+    </audio>
 
     <div class="container">
-
-        <div id="intro" data-section="1">
-            <h1 class="title">Tarry And Mary's Adventure</h1>
-            <div class="paragraphs-slide">
-                <p class="text">Welcome to Tarry And Mary's Adventure Story</p>
-                <p class="text">
-                    Once upon a time, Tarry and his sister Mary were lost in the woods.
-                    After trying to find their way back for two long days, they were
-                    finally tired.
-                </p>
-                <p class="text">
-                    They sat on the straw only to find themselves sitting on a large
-                    locked box, and they realised a large treasure was hidden in there!
-                </p>
-                <p class="text">They tried by all means to open it or even break it.</p>
-                <p class="text">
-                    Suddenly, the earth shook and a genie appeared to them, and said:
-                </p>
-                <p class="text">
-                    "Many people have found this treasure before you, yet it remained
-                    locked, for no one was able to find the lost key!"
-                </p>
-                <p class="text">
-                    "And many have died while looking for the key! If either of you has
-                    the courage to take on this adventure to search for the key, I’ll
-                    give you the instructions".
-                </p>
-                <p class="text"> “Sure, we will both take it on!” replied Tarry and Mary</p>
-                <p class="text">
-                    “Only one person is allowed to go! But beware, he might not return,
-                    he might be eaten by a wild animal, or he might fall into a trap.”
-                    said genie
-                </p>
-                <p class="text">”Ok, one of us will take this risk!” they said</p>
-                <div class="intro-text10 text">
-                    <p>
-                        ”The one who goes, has to go this way. He/she will find a house and
-                        a hut. He/she will have to choose to search in <span>one</span> of
-                        the two! <span>Beware of wild animals.</span> In the place you
-                        choose, you only have <span>two minutes</span> to come out,
-                        otherwise, you will be killed. In each room you enter,
-                        <span>you can search in only two places</span>. In one of the three
-                        options in each place there is <span>a hidden trap</span>, if you
-                        fall into it, you will die! Good luck!”
+        <div class="intro-container" id="intro-container">
+            <div id="intro" data-section="1">
+                <h1 id="main-title" class="title">Tarry And Mary's Adventure</h1>
+                <div class="paragraphs-slide">
+                    <p class="text">Welcome to Tarry And Mary's Adventure Story</p>
+                    <p class="text">
+                        Once upon a time, Tarry and his sister Mary were lost in the
+                        woods. After trying to find their way back for two long days, they
+                        were finally tired.
                     </p>
+                    <p class="text">
+                        They sat on the straw only to find themselves sitting on a large
+                        locked box, and they realised a large treasure was hidden in
+                        there!
+                    </p>
+                    <p class="text">
+                        They tried by all means to open it or even break it.
+                    </p>
+                    <p class="text">
+                        Suddenly, the earth shook and a genie appeared to them, and said:
+                    </p>
+                    <p class="text">
+                        "Many people have found this treasure before you, yet it remained
+                        locked, for no one was able to find the lost key!"
+                    </p>
+                    <p class="text">
+                        "And many have died while looking for the key! If either of you
+                        has the courage to take on this adventure to search for the key,
+                        I’ll give you the instructions".
+                    </p>
+                    <p class="text">
+                        “Sure, we will both take it on!” replied Tarry and Mary
+                    </p>
+                    <p class="text">
+                        “Only one person is allowed to go! But beware, he might not
+                        return, he might be eaten by a wild animal, or he might fall into
+                        a trap.” said genie
+                    </p>
+                    <p class="text">”Ok, one of us will take this risk!” they said</p>
+                    <div class="intro-text10 text">
+                        <p>
+                            ”The one who goes, has to go this way. He/she will find a house
+                            and a hut. He/she will have to choose to search in
+                            <span>one</span> of the two!
+                            <span>Beware of wild animals.</span> In the place you choose,
+                            you only have <span>two minutes</span> to come out, otherwise,
+                            you will be killed. In each room you enter,
+                            <span>you can search in only two places</span>. In one of the
+                            three options in each place there is <span>a hidden trap</span>,
+                            if you fall into it, you will die! Good luck!”
+                        </p>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="characters">
+                    <img src="../assets/images/boy.png" class="character-img" />
+                    <img src="../assets/images/girl.png" class="character-img" />
+                </div>
+                <a href="#" class="start-btn">Start</a>
             </div>
-            <div class="characters">
-                <img src="../assets/images/boy.png" class="character-img" />
-                <img src="../assets/images/girl.png" class="character-img" />
-            </div>
-            <a href="#" class="start-btn">Start</a>
         </div>
 
         <!-- ******Setting the timer****** -->
         <div id="timer" class="timer">
             <p>timer :&nbsp;</p>
-            <div class="timer-container">05:00</div>
+            <div class="timer-container">01:00</div>
         </div>
 
         <!-- ******Display the selected character****** -->
@@ -160,24 +157,24 @@
                 <h3>refrigerator</h3>
             </div>
             <div class="option kitchen-option">
-                <a href="#kitchen-dish-washer"></a>
-                <h3>Dishwasher</h3>
+                <a href="#kitchen-microwave"></a>
+                <h3>microwave</h3>
             </div>
         </div>
 
         <!-- ******After choosing the bedroom****** -->
         <div id="bedroom" data-section="6" class="options bedroom-options">
             <div class="option bedroom-option">
-                <a href="#bedroom-bed"></a>
-                <h3>Bed</h3>
+                <a href="#bedroom-bookshelf"></a>
+                <h3>Bookshelf</h3>
             </div>
             <div class="option bedroom-option">
-                <a href="#bedroom-drawer"></a>
-                <h3>Drawer</h3>
+                <a href="#bedroom-dressing-table"></a>
+                <h3>Dressing table</h3>
             </div>
             <div class="option bedroom-option">
                 <a href="#bedroom-bedside-table"></a>
-                <h3>Closet</h3>
+                <h3>Beside table</h3>
             </div>
         </div>
 
@@ -192,12 +189,11 @@
                 <h3>Table</h3>
             </div>
             <div class="option living-room-option">
-                <a href="#living-room-bookshelf"></a>
-                <h3>Book-shelf</h3>
+                <a href="#living-room-tv-stand"></a>
+                <h3>TV-Stand drawer</h3>
             </div>
         </div>
     </div>
-    <script src="../assets/Javascript/index.js"></script>
 </body>
 
 </html>
