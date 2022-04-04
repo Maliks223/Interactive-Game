@@ -10,24 +10,41 @@
   padding: 0;
   font-family: Roboto, sans serif;
   letter-spacing: 0.1em;
-  color: white;
+  color:white;
+}
+
+html{
+  background-color: var(--primary-color);
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../images/woods-bg.jpg');
   background-size: cover;
   background-position: center;
+  background-repeat: repeat;
+  overflow-x: hidden;
 }
 
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center
+}
+
+.intro-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .title {
+  margin: 1em;
   padding: 10px;
   text-align: center;
   color: var(--primary-color);
@@ -35,18 +52,24 @@ body {
   font-weight: 600;
 }
 
+#main-title{
+  margin: unset;
+}
+
 .text {
   padding: 0 1%;
-  height: 15rem;
+  height: 9rem;
   align-items: center;
   line-height: 1.5rem;
   font-size: 1.3rem;
 }
 
 #intro {
+  position: relative;
   width: 80%;
+  height: 100%;
   margin: auto;
-  padding: 1.5em;
+  /* padding: 1.5em; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -55,10 +78,14 @@ body {
 
 .paragraphs-slide {
   position: relative;
-  padding: 30px 60px;
-  border: 0.5px groove white;
+  padding: 25px 50px;
+  margin:1em;
+  border: 0.5px groove var(--secondary-color);
   border-radius: 10px;
-  width: 50%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Next & previous buttons */
@@ -98,20 +125,22 @@ body {
 .characters {
   display: flex;
   padding: 3%;
+  padding-top:unset;
   align-items: flex-end;
-  justify-content: space-evenly;
+  justify-content: center;
+  width: 100%;
 }
 
 .character-img {
   margin: 0 2rem;
-  height: 400px;
+  height: 370px;
 }
 
 .start-btn {
   display: none;
   position: fixed;
-  right: 1rem;
-  bottom: 1rem;
+  bottom:10%;
+  right:8%;
   text-decoration: none;
   padding: 1rem 2rem;
   background-color: red;
@@ -135,6 +164,7 @@ body {
 
 .option h3 {
   text-align: center;
+  margin-top:1em;
   color: var(--secondary-color);
 }
 
@@ -279,5 +309,26 @@ body {
   }
   .options h3 {
     font-size: medium;
+  }
+  .start-btn {
+    padding: 1.2em;
+    right:1%;
+  }
+}
+
+@media (max-width: 450px) {
+  .start-btn {
+    padding: 1em;
+    right:5px;
+    bottom:4%;
+  }
+  .text{
+    height: 15rem;
+  }
+}
+
+@media (max-width: 350px){
+  .text{
+    height: 17rem;
   }
 }
