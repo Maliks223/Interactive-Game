@@ -67,6 +67,14 @@ function startTimer() {
   }, 1000);
 }
 
+var dest = "";
+document.querySelector(".back-btn").addEventListener("click", () => {
+  document.getElementById("home").style.display = "flex";
+  document.getElementById(this.dest).style.display = "none";
+  document.querySelector(".back-btn").href = "#home";
+  document.querySelector(".back-btn").style.display = "none";
+});
+
 //On start-btn click, go to the first step: Choose the character
 const startBtn = document.querySelector(".start-btn");
 startBtn.addEventListener("click", () => {
@@ -90,3 +98,35 @@ document.getElementById("girl-character").addEventListener("click", () => {
   document.querySelector(".tarry-img").style.display = "none";
   document.querySelector(".character-name").innerHTML = "Mary";
 });
+
+document
+  .querySelector(".house-option:nth-child(1) a")
+  .addEventListener("click", () => {
+    document.getElementById("houses").style.display = "none";
+    document.getElementById("home").style.display = "flex";
+  });
+
+document
+  .querySelector(".home-option:nth-child(1) a")
+  .addEventListener("click", () => {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("kitchen").style.display = "flex";
+    document.querySelector(".back-btn").style.display = "block";
+    this.dest = "kitchen";
+  });
+document
+  .querySelector(".home-option:nth-child(2) a")
+  .addEventListener("click", () => {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("living-room").style.display = "flex";
+    document.querySelector(".back-btn").style.display = "block";
+    this.dest = "living-room";
+  });
+document
+  .querySelector(".home-option:nth-child(3) a")
+  .addEventListener("click", () => {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("bedroom").style.display = "flex";
+    document.querySelector(".back-btn").style.display = "block";
+    this.dest = "bedroom";
+  });
