@@ -39,7 +39,7 @@ function playAudio() {
 //On start-btn click, go to the first step: Choose the character
 const startBtn = document.querySelector(".start-btn");
 startBtn.addEventListener("click", () => {
-  document.getElementById("intro").style.display = "none";
+  document.getElementById("intro-container").style.display = "none";
   document.getElementById("characters").style.display = "block";
 });
 
