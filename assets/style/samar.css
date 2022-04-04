@@ -48,7 +48,7 @@ body {
 .title {
   padding: 10px;
   text-align: center;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: xx-large;
   font-weight: 600;
 }
@@ -202,7 +202,7 @@ body {
 .option h3 {
   text-align: center;
   margin-top: 1em;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /* options style */

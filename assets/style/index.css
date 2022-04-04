@@ -19,41 +19,53 @@ html {
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/woods-bg.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: repeat;
+  overflow-x: hidden;
 }
 
 .container {
-  width: 90vw;
-  margin: auto;
-  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.intro-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .title {
   padding: 10px;
   text-align: center;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: xx-large;
   font-weight: 600;
 }
 
 .text {
   padding: 0 1%;
-  height: 15rem;
+  height: 9rem;
   align-items: center;
   line-height: 1.5rem;
   font-size: 1.3rem;
 }
 
 .timer {
+  display: none;
   background-color: green;
   width: 150px;
   padding: 1rem;
-  display: flex;
   position: fixed;
   right: 1rem;
   top: 1rem;
@@ -89,7 +101,7 @@ body {
 #intro {
   width: 100%;
   margin: auto;
-  padding: 1.5em;
+  /* padding: 1.5em; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -99,7 +111,7 @@ body {
 .paragraphs-slide {
   position: relative;
   padding: 30px 60px;
-  border: 0.5px groove white;
+  border: 0.5px groove var(--secondary-color);
   border-radius: 10px;
   width: 60%;
 }
@@ -140,7 +152,7 @@ body {
 
 .characters {
   display: flex;
-  padding: 3%;
+  /* padding: 3%; */
   align-items: flex-end;
   justify-content: space-evenly;
 }
@@ -189,7 +201,8 @@ body {
 
 .option h3 {
   text-align: center;
-  color: var(--secondary-color);
+  margin-top: 1em;
+  color: var(--primary-color);
 }
 
 /* options style */
@@ -203,6 +216,7 @@ body {
 /* each option by itself */
 .option {
   border: 1px solid var(--primary-color);
+  border-radius: 10px;
   padding: 1%;
   margin: 0 1%;
   transition: 0.2s ease-in-out all;
@@ -299,7 +313,7 @@ body {
     font-size: x-large;
   }
   .paragraphs-slide {
-    padding: 50px;
+    padding: 60px;
     width: 70%;
   }
   .text {
@@ -332,7 +346,10 @@ body {
     height: 250px;
   }
   .paragraphs-slide {
-    width: 100%;
+    width: 98%;
+  }
+  .text {
+    height: 15rem;
   }
   .options {
     flex-direction: column;
