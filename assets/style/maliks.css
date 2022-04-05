@@ -1,29 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;300;400&display=swap");
 
 :root {
-<<<<<<< HEAD
-  --primary-color: rgb(141, 141, 141); /* Not Completed */
-  --secondary-color: rgb(200, 200, 200); /* Not Completed */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Roboto, sans serif;
-  letter-spacing: 0.1em;
-  color: white;
-}
-
-body {
-  background-color: rgba(0, 0, 0, 0.9);
-  background-size: cover;
-  background-position: center;
-}
-
-.container {
-  width: 100vw;
-  height: 100vh;
-=======
   --primary-color: rgb(141, 141, 141);
   --secondary-color: rgb(200, 200, 200);
   --backgroundColor: rgba(0, 0, 0, 0.7);
@@ -55,18 +32,11 @@ body {
 .container {
   width: 100vw;
   min-height: 100vh;
->>>>>>> development
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-<<<<<<< HEAD
-.title {
-  padding: 10px;
-  text-align: center;
-  color: var(--primary-color);
-=======
 .intro-container {
   width: 100vw;
   min-height: 100vh;
@@ -80,16 +50,10 @@ body {
   padding: 10px;
   text-align: center;
   color: var(--secondary-color);
->>>>>>> development
   font-size: xx-large;
   font-weight: 600;
 }
 
-<<<<<<< HEAD
-.text {
-  padding: 0 1%;
-  height: 15rem;
-=======
 #main-title {
   margin: unset;
 }
@@ -97,24 +61,17 @@ body {
 .text {
   padding: 0 1%;
   height: 9rem;
->>>>>>> development
   align-items: center;
   line-height: 1.5rem;
   font-size: 1.3rem;
 }
 
 #intro {
-<<<<<<< HEAD
-  width: 80%;
-  margin: auto;
-  padding: 1.5em;
-=======
   position: relative;
   width: 80%;
   height: 100%;
   margin: auto;
   /* padding: 1.5em; */
->>>>>>> development
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -124,11 +81,6 @@ body {
 .paragraphs-slide {
   position: relative;
   padding: 30px 60px;
-<<<<<<< HEAD
-  border: 0.5px groove white;
-  border-radius: 10px;
-  width: 50%;
-=======
   margin: 1em;
   border: 0.5px groove var(--secondary-color);
   border-radius: 10px;
@@ -136,7 +88,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
->>>>>>> development
 }
 
 /* Next & previous buttons */
@@ -173,13 +124,6 @@ body {
   font-weight: bold;
 }
 
-<<<<<<< HEAD
-.characters {
-  display: flex;
-  padding: 3%;
-  align-items: flex-end;
-  justify-content: space-evenly;
-=======
 .timer {
   display: none;
   background-color: green;
@@ -224,7 +168,6 @@ body {
   align-items: flex-end;
   justify-content: center;
   width: 100%;
->>>>>>> development
 }
 
 .character-img {
@@ -232,20 +175,6 @@ body {
   height: 400px;
 }
 
-<<<<<<< HEAD
-.start-btn {
-  display: none;
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-=======
-.back-btn {
-  display: none;
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  text-decoration: none;
-  padding: 1rem 2rem;
   background-color: green;
   border-radius: 10px;
   z-index: 10;
@@ -256,7 +185,6 @@ body {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
->>>>>>> development
   text-decoration: none;
   padding: 1rem 2rem;
   background-color: red;
@@ -264,7 +192,6 @@ body {
   animation-name: startAnimation;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-}
 
 @keyframes startAnimation {
   0% {
@@ -719,11 +646,7 @@ body {
     font-size: x-large;
   }
   .paragraphs-slide {
-<<<<<<< HEAD
-    padding: 60px;
-=======
     /* padding: 60px; */
->>>>>>> development
     width: 70%;
   }
   .text {
@@ -733,12 +656,9 @@ body {
   .character-img {
     margin: 0 2rem;
     height: 300px;
-<<<<<<< HEAD
-=======
   }
   .character-selected img {
     width: 70px;
->>>>>>> development
   }
   .options {
     justify-content: center;
@@ -758,12 +678,9 @@ body {
     width: 250px;
     height: 250px;
   }
-<<<<<<< HEAD
-=======
   .paragraphs-slide {
     padding: 80px;
   }
->>>>>>> development
   .options {
     flex-direction: column;
   }
