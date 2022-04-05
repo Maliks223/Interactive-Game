@@ -335,6 +335,10 @@ body {
   background-color: var(--backgroundColor);
 }
 
+.bear-attack img{
+  width: 500px;
+}
+
 .try-again-btn {
   text-decoration: none;
   padding: 1rem 2rem;
@@ -519,4 +523,12 @@ body {
   .character-selected img {
     width: 50px;
   }
+  .bear-attack img {
+    width: 300px;
+  }
+  .trap .trap-gameover {
+    font-size: xx-large;
+    margin-top: 80px;
+  }
+
 }

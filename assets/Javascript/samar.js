@@ -128,6 +128,13 @@ document.querySelector(".start-btn").addEventListener("click", () => {
   document.getElementById("characters").style.display = "block";
 });
 
+//When user chooses hut ... bear attack
+document.getElementById("hut-click").addEventListener('click', ()=>{
+  document.querySelector('.bear-attack').style.display="block";
+  trapSelected('bear');
+});
+
+
 //Going to the chosen house
 document
   .querySelector(".house-option:nth-child(1) a")
@@ -167,24 +174,29 @@ document
   });
 
 //Putting traps to the sofa, bed, and refrigerator
-function trapSelected() {
-  document.querySelector(".trap").style.display = "flex";
+function trapSelected(t) {
   document.querySelector(".back-btn").style.display = "none";
   stopAudio("tic-tac-audio");
   document.removeEventListener("click", playAudio);
-  playAudio("boom-audio");
+  if(t=='trap'){
+    document.querySelector(".boom-trap").style.display = "flex";
+    playAudio('boom-audio');
+  }else if(t=='bear'){
+    document.querySelector(".bear-attack").style.display="flex";
+    playAudio('bear');
+  }
 }
 
 document.getElementById("living-room-sofa").addEventListener("click", () => {
-  trapSelected();
+  trapSelected('trap');
 });
 document.getElementById("bedroom-bed").addEventListener("click", () => {
-  trapSelected();
+  trapSelected('trap');
 });
 document
   .getElementById("kitchen-refrigerator")
   .addEventListener("click", () => {
-    trapSelected();
+    trapSelected('trap');
   });
 
 //For those which doesn't contain the key
