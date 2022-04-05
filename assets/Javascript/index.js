@@ -75,6 +75,11 @@ function startTimer() {
     if (seconds == 0) {
       if (min == 0) {
         document.querySelector(".timer").style.backgroundColor = "red";
+        document.querySelector(".game-over").style.display = "flex";
+        document.querySelector(".try-again-btn").style.display = "block";
+        stopAudio("tic-tac-audio");
+        document.removeEventListener("click", playAudio);
+        playAudio("game-over-audio");
         clearInterval(intervalID);
       } else {
         min--;
@@ -169,6 +174,7 @@ document
 //Putting traps to the sofa, bed, and refrigerator
 function trapSelected() {
   document.querySelector(".trap").style.display = "flex";
+  document.querySelector(".try-again-btn").style.display = "block";
   document.querySelector(".back-btn").style.display = "none";
   stopAudio("tic-tac-audio");
   document.removeEventListener("click", playAudio);
@@ -198,7 +204,14 @@ document.getElementById("living-room-table").addEventListener("click", () => {
   document.querySelector(".empty-selection").style.display = "flex";
 });
 
-document.getElementById("bedroom-closet").addEventListener("click", () => {});
+document.getElementById("bedroom-closet").addEventListener("click", () => {
+  document.querySelector(".congrats").style.display = "flex";
+  document.querySelector(".try-again-btn").style.display = "block";
+  stopAudio("tic-tac-audio");
+  document.removeEventListener("click", playAudio);
+  playAudio("winning-audio");
+  clearInterval(intervalID);
+});
 
 document
   .getElementById("bedroom-dressing-table")
