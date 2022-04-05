@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;300;400&display=swap");
 
 :root {
-  --primary-color: rgb(141, 141, 141); /* Not Completed */
-  --secondary-color: rgb(200, 200, 200); /* Not Completed */
+  --primary-color: rgb(141, 141, 141);
+  --secondary-color: rgb(200, 200, 200);
+  --backgroundColor: rgba(0, 0, 0, 0.7);
 }
 
 html {
@@ -19,41 +20,53 @@ html {
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/woods-bg.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: repeat;
+  overflow-x: hidden;
 }
 
 .container {
-  width: 90vw;
-  margin: auto;
-  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.intro-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .title {
   padding: 10px;
   text-align: center;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: xx-large;
   font-weight: 600;
 }
 
 .text {
   padding: 0 1%;
-  height: 15rem;
+  height: 9rem;
   align-items: center;
   line-height: 1.5rem;
   font-size: 1.3rem;
 }
 
 .timer {
+  display: none;
   background-color: green;
   width: 150px;
   padding: 1rem;
-  display: flex;
   position: fixed;
   right: 1rem;
   top: 1rem;
@@ -89,7 +102,7 @@ body {
 #intro {
   width: 100%;
   margin: auto;
-  padding: 1.5em;
+  /* padding: 1.5em; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -99,7 +112,7 @@ body {
 .paragraphs-slide {
   position: relative;
   padding: 30px 60px;
-  border: 0.5px groove white;
+  border: 0.5px groove var(--secondary-color);
   border-radius: 10px;
   width: 60%;
 }
@@ -130,7 +143,7 @@ body {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--backgroundColor);
 }
 
 .intro-text10 span {
@@ -140,7 +153,7 @@ body {
 
 .characters {
   display: flex;
-  padding: 3%;
+  /* padding: 3%; */
   align-items: flex-end;
   justify-content: space-evenly;
 }
@@ -185,11 +198,13 @@ body {
   padding: 1rem 2rem;
   background-color: green;
   border-radius: 10px;
+  z-index: 10;
 }
 
 .option h3 {
   text-align: center;
-  color: var(--secondary-color);
+  margin-top: 1em;
+  color: var(--primary-color);
 }
 
 /* options style */
@@ -203,6 +218,7 @@ body {
 /* each option by itself */
 .option {
   border: 1px solid var(--primary-color);
+  border-radius: 10px;
   padding: 1%;
   margin: 0 1%;
   transition: 0.2s ease-in-out all;
@@ -293,13 +309,160 @@ body {
   background-image: url("../images/salon/salon-bookshelf.png");
 }
 
+.trap {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid red;
+  background-color: var(--backgroundColor);
+}
+
+.try-again-btn {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.trap h1,
+.trap h2 {
+  font-weight: 300;
+  padding: 1%;
+}
+
+.trap .trap-gameover {
+  font-size: 45px;
+  margin-top: 50px;
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 2%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: red;
+  transform: translate(-50%, -50%);
+}
+
+.trap img {
+  animation-name: trapAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+}
+
+.empty-selection {
+  background-color: var(--backgroundColor);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.empty-selection h1,
+.empty-selection h2 {
+  font-weight: 300;
+  padding: 2%;
+}
+
+.empty-selection h1 {
+  font-size: 100px;
+}
+.empty-selection h2 {
+  font-size: 40px;
+}
+
+@keyframes trapAnimation {
+  0% {
+    width: 0%;
+  }
+  5% {
+    width: 5%;
+  }
+  10% {
+    width: 10%;
+  }
+  15% {
+    width: 15%;
+  }
+  20% {
+    width: 20%;
+  }
+  25% {
+    width: 25%;
+  }
+  30% {
+    width: 30%;
+  }
+  35% {
+    width: 35%;
+  }
+  40% {
+    width: 40%;
+  }
+  45% {
+    width: 45%;
+  }
+  50% {
+    width: 50%;
+  }
+  55% {
+    width: 55%;
+  }
+  60% {
+    width: 60%;
+  }
+  65% {
+    width: 65%;
+  }
+  70% {
+    width: 70%;
+  }
+  75% {
+    width: 75%;
+  }
+  80% {
+    width: 80%;
+  }
+  85% {
+    width: 85%;
+  }
+  90% {
+    width: 90%;
+  }
+  95% {
+    width: 95%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.disable-section {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
 /* ipad screen */
 @media (max-width: 1100px) {
   .title {
     font-size: x-large;
   }
   .paragraphs-slide {
-    padding: 50px;
+    padding: 60px;
     width: 70%;
   }
   .text {
@@ -323,6 +486,13 @@ body {
     width: 300px;
     height: 300px;
   }
+  .empty-selection h1 {
+    font-size: 50px;
+    padding-bottom: 1rem;
+  }
+  .empty-selection h2 {
+    font-size: 20px;
+  }
 }
 
 /* phone screen */
@@ -332,7 +502,10 @@ body {
     height: 250px;
   }
   .paragraphs-slide {
-    width: 100%;
+    width: 98%;
+  }
+  .text {
+    height: 15rem;
   }
   .options {
     flex-direction: column;
