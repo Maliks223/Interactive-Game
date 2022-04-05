@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../assets/style/samar.css" />
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;300;400&display=swap"> -->
   <script defer src="../assets/Javascript/samar.js"></script>
-  <title>Interactive Story</title>
+  <title>Document</title>
 </head>
 
 <body>
@@ -19,6 +19,9 @@
   <audio id="tic-tac-audio">
     <source src="../assets/audios/zapsplat_horror_musical_clock_ticking_tick_tock_dark_sinister_80437.mp3"
       type="audio/mpeg" loop="loop" />
+  </audio>
+  <audio id="boom-audio">
+    <source src="../assets/audios/sound_spark_Glitch_Factory_01_Decimated_10.mp3" type="audio/mpeg" loop="loop" />
   </audio>
 
   <div class="container">
@@ -149,49 +152,64 @@
     <!-- ******After choosing the kitchen****** -->
     <div id="kitchen" data-section="5" class="options kitchen-options">
       <div class="option kitchen-option">
-        <a href="#kitchen-cupboards"></a>
-        <h3>cupboards</h3>
+        <a href="#kitchen-cupboards" id="kitchen-cupboards"></a>
+        <h3>Cupboards</h3>
       </div>
       <div class="option kitchen-option">
-        <a href="#kitchen-refrigerator"></a>
-        <h3>refrigerator</h3>
+        <a href="#kitchen-refrigerator" id="kitchen-refrigerator"></a>
+        <h3>Refrigerator</h3>
       </div>
       <div class="option kitchen-option">
-        <a href="#kitchen-microwave"></a>
-        <h3>microwave</h3>
+        <a href="#kitchen-dishwasher" id="kitchen-dishwasher"></a>
+        <h3>Dishwasher</h3>
       </div>
     </div>
 
     <!-- ******After choosing the bedroom****** -->
     <div id="bedroom" data-section="6" class="options bedroom-options">
       <div class="option bedroom-option">
-        <a href="#bedroom-bookshelf"></a>
-        <h3>Bookshelf</h3>
+        <a href="#bedroom-bed" id="bedroom-bed"></a>
+        <h3>Bed</h3>
       </div>
       <div class="option bedroom-option">
-        <a href="#bedroom-dressing-table"></a>
+        <a href="#bedroom-dressing-table" id="bedroom-dressing-table"></a>
         <h3>Dressing table</h3>
       </div>
       <div class="option bedroom-option">
-        <a href="#bedroom-bedside-table"></a>
-        <h3>Beside table</h3>
+        <a href="#bedroom-closet" id="bedroom-closet"></a>
+        <h3>Closet</h3>
       </div>
     </div>
 
     <!-- ******After choosing the Living room****** -->
     <div id="living-room" data-section="7" class="options living-room-options">
       <div class="option living-room-option">
-        <a href="#living-room-sofa"></a>
+        <a href="#living-room-sofa" id="living-room-sofa"></a>
         <h3>sofa</h3>
       </div>
       <div class="option living-room-option">
-        <a href="#living-room-table"></a>
+        <a href="#living-room-table" id="living-room-table"></a>
         <h3>Table</h3>
       </div>
       <div class="option living-room-option">
-        <a href="#living-room-tv-stand"></a>
-        <h3>TV-Stand drawer</h3>
+        <a href="#living-room-bookshelf" id="living-room-bookshelf"></a>
+        <h3>Bookshelf</h3>
       </div>
+    </div>
+
+    <!-- for the trap in the sections -->
+    <div class="trap">
+      <h1>Boom!!!</h1>
+      <h2>You've selected a trap</h2>
+      <p class="trap-gameover">Game Over</p>
+      <img src="../assets/images/attack/boom.png" alt="Boom image when entering a trap">
+      <a href="./samar.html" class="try-again-btn">Try again ?</a>
+    </div>
+
+    <!-- not the correct choice for the key -->
+    <div class="empty-selection">
+      <h1>Opps...</h1>
+      <h2>No key in this place</h2>
     </div>
   </div>
 </body>
