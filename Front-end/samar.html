@@ -14,14 +14,22 @@
 
 <body>
   <audio id="intro-audio">
-    <source src="../assets/audios/price-of-freedom-33106.mp3" type="audio/mpeg" loop="loop" />
+    <source src="../assets/audios/intro.mp3" type="audio/mpeg" loop="loop" />
   </audio>
   <audio id="tic-tac-audio">
-    <source src="../assets/audios/zapsplat_horror_musical_clock_ticking_tick_tock_dark_sinister_80437.mp3"
-      type="audio/mpeg" loop="loop" />
+    <source src="../assets/audios/tic-tac-time.mp3" type="audio/mpeg" loop="loop" />
   </audio>
   <audio id="boom-audio">
-    <source src="../assets/audios/sound_spark_Glitch_Factory_01_Decimated_10.mp3" type="audio/mpeg" loop="loop" />
+    <source src="../assets/audios/boom.mp3" type="audio/mpeg" loop="loop" />
+  </audio>
+  <audio id="game-over-audio">
+    <source src="../assets/audios/game-over.wav" type="audio/mpeg" loop="loop" />
+  </audio>
+  <audio id="winning-audio">
+    <source src="../assets/audios/winning.mp3" type="audio/mpeg" loop="loop" />
+  </audio>
+  <audio id="bear">
+    <source src="../assets/audios/bear.mp3" type="audio/mpeg" loop="loop" />
   </audio>
 
   <div class="container">
@@ -70,10 +78,9 @@
               and a hut. He/she will have to choose to search in
               <span>one</span> of the two!
               <span>Beware of wild animals.</span> In the place you choose,
-              you only have <span>two minutes</span> to come out, otherwise,
-              you will be killed. In each room you enter,
-              <span>you can search in only two places</span>. In one of the
-              three options in each place there is <span>a hidden trap</span>,
+              you only have <span>one minute</span> to come out, otherwise,
+              you will be killed. In each room you enter, there are three places to look in. In one of them, there is
+              <span>a hidden trap</span>,
               if you fall into it, you will die! Good luck!”
             </p>
           </div>
@@ -128,7 +135,7 @@
           <h3>The House</h3>
         </div>
         <div class="option house-option">
-          <a href="#hut"></a>
+          <a href="#hut" id="hut-click"></a>
           <h3>The Hut</h3>
         </div>
       </div>
@@ -197,13 +204,38 @@
       </div>
     </div>
 
+    <!-- ******After choosing the Hut****** -->
+    <div class="trap bear-attack">
+      <h1>The Bear Is Here!</h1>
+      <h2>He ate you!</h2>
+      <p class="trap-gameover">Game Over</p>
+      <img src="../assets/images/attack/attacking-bear.png" alt="Bear image when choosing the hut">
+      <a href="./samar.html" class="try-again-btn">Try again ?</a>
+    </div>
+
     <!-- for the trap in the sections -->
-    <div class="trap">
+    <div class="trap boom-trap">
       <h1>Boom!!!</h1>
       <h2>You've selected a trap</h2>
       <p class="trap-gameover">Game Over</p>
       <img src="../assets/images/attack/boom.png" alt="Boom image when entering a trap">
       <a href="./samar.html" class="try-again-btn">Try again ?</a>
+    </div>
+
+    <!-- game-over & congrats sections -->
+    <div class="game-over">
+      <h1>Game Over</h1>
+      <h3>You ran out of time</h3>
+      <h3>Your fate is death</h3>
+    </div>
+    <div class="congrats">
+      <h1>Congratulations</h1>
+      <h3>You've found the key</h3>
+      <h4>This is your reward</h4>
+      <div class="treasure">
+        <img src="../assets/images/treasure/key2.png">
+        <img src="../assets/images/treasure/treasure1.png">
+      </div>
     </div>
 
     <!-- not the correct choice for the key -->
