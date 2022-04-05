@@ -336,10 +336,17 @@ body {
 }
 
 .try-again-btn {
+  display: none;
+  width: fit-content;
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-decoration: none;
   padding: 1rem 2rem;
   background-color: red;
   border-radius: 10px;
+  z-index: 20;
 }
 
 .trap h1,
@@ -495,11 +502,43 @@ body {
 .game-over h3 {
   font-weight: 400;
   font-size: 40px;
+}
+.game-over h3:last-child {
+  color: red;
+  font-size: 90px;
   margin-bottom: 10rem;
+  animation-name: game-over-Animation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+@keyframes game-over-Animation {
+  0% {
+    font-size: 0px;
+    transform: rotate(0deg);
+  }
+  25% {
+    font-size: 30px;
+    transform: rotate(90deg);
+  }
+  50% {
+    font-size: 50px;
+    transform: rotate(180deg);
+  }
+  75% {
+    font-size: 70px;
+    transform: rotate(270deg);
+  }
+  100% {
+    font-size: 90px;
+    transform: rotate(360deg);
+  }
 }
 
 .congrats {
-  display: flex;
+  display: none;
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
@@ -511,6 +550,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.774);
+  z-index: 10;
 }
 .congrats img {
   width: 400px;
