@@ -175,13 +175,6 @@ body {
   height: 400px;
 }
 
-.back-btn {
-  display: none;
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  text-decoration: none;
-  padding: 1rem 2rem;
   background-color: green;
   border-radius: 10px;
   z-index: 10;
@@ -199,7 +192,6 @@ body {
   animation-name: startAnimation;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-}
 
 @keyframes startAnimation {
   0% {
