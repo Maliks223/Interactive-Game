@@ -61,8 +61,10 @@ function goToHomeOptions(chosen_charcter) {
 function startTimer() {
   min = 1;
   seconds = 0;
-  flag = true;
   intervalID = setInterval(() => {
+    if (document.querySelector(".trap").style.display == "flex") {
+      clearInterval(intervalID);
+    }
     if (seconds < 10) {
       document.getElementById("timer").innerHTML =
         "timer : 0" + min + ":0" + seconds + "";
@@ -88,27 +90,34 @@ function startTimer() {
 var dest = "";
 document.querySelector(".back-btn").addEventListener("click", () => {
   document.getElementById("home").style.display = "flex";
-  document.getElementById(this.dest).style.display = "none";
+  document.getElementById(dest).style.display =
+    document.querySelector(".back-btn").style.display =
+    document.querySelector(".empty-selection").style.display =
+      "none";
   document.querySelector(".back-btn").href = "#home";
-  document.querySelector(".back-btn").style.display = "none";
 });
 
+//Selecting a character
 document.getElementById("boy-character").addEventListener("click", () => {
   startTimer();
   goToHomeOptions("tarry");
-  document.getElementById("characters").style.display = "none";
-  document.getElementById("houses").style.display = "block";
-  document.querySelector(".character-selected").style.display = "block";
-  document.querySelector(".mary-img").style.display = "none";
+  document.getElementById("characters").style.display = document.querySelector(
+    ".mary-img"
+  ).style.display = "none";
+  document.getElementById("houses").style.display = document.querySelector(
+    ".character-selected"
+  ).style.display = "block";
   document.querySelector(".character-name").innerHTML = "Tarry";
 });
 document.getElementById("girl-character").addEventListener("click", () => {
   startTimer();
   goToHomeOptions("mary");
-  document.getElementById("characters").style.display = "none";
-  document.getElementById("houses").style.display = "block";
-  document.querySelector(".character-selected").style.display = "block";
-  document.querySelector(".tarry-img").style.display = "none";
+  document.getElementById("characters").style.display = document.querySelector(
+    ".tarry-img"
+  ).style.display = "none";
+  document.getElementById("houses").style.display = document.querySelector(
+    ".character-selected"
+  ).style.display = "block";
   document.querySelector(".character-name").innerHTML = "Mary";
 });
 
@@ -156,3 +165,51 @@ document
     document.querySelector(".back-btn").style.display = "block";
     this.dest = "bedroom";
   });
+
+//Putting traps to the sofa, bed, and refrigerator
+function trapSelected() {
+  document.querySelector(".trap").style.display = "flex";
+  document.querySelector(".back-btn").style.display = "none";
+  stopAudio("tic-tac-audio");
+  document.removeEventListener("click", playAudio);
+  playAudio("boom-audio");
+}
+
+document.getElementById("living-room-sofa").addEventListener("click", () => {
+  trapSelected();
+});
+document.getElementById("bedroom-bed").addEventListener("click", () => {
+  trapSelected();
+});
+document
+  .getElementById("kitchen-refrigerator")
+  .addEventListener("click", () => {
+    trapSelected();
+  });
+
+//For those which doesn't contain the key
+document
+  .getElementById("living-room-bookshelf")
+  .addEventListener("click", () => {
+    document.querySelector(".empty-selection").style.display = "flex";
+  });
+
+document.getElementById("living-room-table").addEventListener("click", () => {
+  document.querySelector(".empty-selection").style.display = "flex";
+});
+
+document.getElementById("bedroom-closet").addEventListener("click", () => {});
+
+document
+  .getElementById("bedroom-dressing-table")
+  .addEventListener("click", () => {
+    document.querySelector(".empty-selection").style.display = "flex";
+  });
+
+document.getElementById("kitchen-dishwasher").addEventListener("click", () => {
+  document.querySelector(".empty-selection").style.display = "flex";
+});
+
+document.getElementById("kitchen-cupboards").addEventListener("click", () => {
+  document.querySelector(".empty-selection").style.display = "flex";
+});
