@@ -11,7 +11,6 @@ html {
 }
 
 * {
-  box-sizing: inherit;
   margin: 0;
   padding: 0;
   font-family: Roboto, sans serif;
@@ -22,7 +21,7 @@ html {
 body {
   min-width: 100vw;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../images/woods-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -47,11 +46,16 @@ body {
 }
 
 .title {
+  margin: 1em;
   padding: 10px;
   text-align: center;
   color: var(--secondary-color);
   font-size: xx-large;
   font-weight: 600;
+}
+
+#main-title {
+  margin: unset;
 }
 
 .text {
@@ -62,45 +66,10 @@ body {
   font-size: 1.3rem;
 }
 
-.timer {
-  display: none;
-  background-color: green;
-  width: 150px;
-  padding: 1rem;
-  position: fixed;
-  right: 1rem;
-  top: 1rem;
-}
-
-.character-selected {
-  display: none;
-  align-items: center;
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  border: 1px solid var(--primary-color);
-  border-radius: 10px;
-  padding: 1%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: -100;
-}
-
-.tarry-img,
-.mary-img {
-  width: 100px;
-}
-
-.character-name {
-  width: 100%;
-  text-align: center;
-  color: var(--primary-color);
-  font-size: larger;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
 #intro {
-  width: 100%;
+  position: relative;
+  width: 80%;
+  height: 100%;
   margin: auto;
   /* padding: 1.5em; */
   display: flex;
@@ -112,9 +81,13 @@ body {
 .paragraphs-slide {
   position: relative;
   padding: 30px 60px;
+  margin: 1em;
   border: 0.5px groove var(--secondary-color);
   border-radius: 10px;
-  width: 60%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Next & previous buttons */
@@ -143,7 +116,7 @@ body {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: var(--backgroundColor);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .intro-text10 span {
@@ -151,11 +124,50 @@ body {
   font-weight: bold;
 }
 
+.timer {
+  display: none;
+  background-color: green;
+  width: 150px;
+  padding: 1rem;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+}
+
+.character-selected {
+  display: none;
+  align-items: center;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 1%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.tarry-img,
+.mary-img {
+  width: 100px;
+}
+
+.character-name {
+  width: 100%;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
 .characters {
   display: flex;
-  /* padding: 3%; */
+  padding: 3%;
+  padding-top: unset;
   align-items: flex-end;
-  justify-content: space-evenly;
+  justify-content: center;
+  width: 100%;
 }
 
 .character-img {
@@ -163,11 +175,23 @@ body {
   height: 400px;
 }
 
+.back-btn {
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: green;
+  border-radius: 10px;
+  z-index: 10;
+}
+
 .start-btn {
   display: none;
   position: fixed;
-  right: 1rem;
   bottom: 1rem;
+  right: 1rem;
   text-decoration: none;
   padding: 1rem 2rem;
   background-color: red;
@@ -189,18 +213,6 @@ body {
   }
 }
 
-.back-btn {
-  display: none;
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  background-color: green;
-  border-radius: 10px;
-  z-index: 10;
-}
-
 .option h3 {
   text-align: center;
   margin-top: 1em;
@@ -218,7 +230,6 @@ body {
 /* each option by itself */
 .option {
   border: 1px solid var(--primary-color);
-  border-radius: 10px;
   padding: 1%;
   margin: 0 1%;
   transition: 0.2s ease-in-out all;
@@ -451,23 +462,18 @@ body {
   }
 }
 
-.disable-section {
-  pointer-events: none;
-  opacity: 0.4;
-}
-
 /* ipad screen */
 @media (max-width: 1100px) {
   .title {
     font-size: x-large;
   }
   .paragraphs-slide {
-    padding: 60px;
+    /* padding: 60px; */
     width: 70%;
   }
   .text {
     line-height: 1rem;
-    font-size: large;
+    font-size: medium;
   }
   .character-img {
     margin: 0 2rem;
@@ -486,13 +492,6 @@ body {
     width: 300px;
     height: 300px;
   }
-  .empty-selection h1 {
-    font-size: 50px;
-    padding-bottom: 1rem;
-  }
-  .empty-selection h2 {
-    font-size: 20px;
-  }
 }
 
 /* phone screen */
@@ -502,10 +501,7 @@ body {
     height: 250px;
   }
   .paragraphs-slide {
-    width: 98%;
-  }
-  .text {
-    height: 15rem;
+    padding: 80px;
   }
   .options {
     flex-direction: column;
@@ -513,7 +509,10 @@ body {
   .options h3 {
     font-size: medium;
   }
-
+  .start-btn {
+    right: 50%;
+    transform: translate(50%, 0);
+  }
   .character-selected {
     opacity: 0.5;
   }
