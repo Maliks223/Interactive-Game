@@ -538,7 +538,7 @@ body {
 }
 
 .congrats {
-  display: none;
+  display: flex;
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
@@ -577,13 +577,22 @@ body {
   margin-bottom: 40px;
 }
 
+.congrats .treasure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.congrats .treasure img:first-child {
+  width: 150px;
+}
+
 /* ipad screen */
 @media (max-width: 1100px) {
   .title {
     font-size: x-large;
   }
   .paragraphs-slide {
-    /* padding: 60px; */
     width: 70%;
   }
   .text {
