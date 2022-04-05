@@ -538,7 +538,7 @@ body {
 }
 
 .congrats {
-  display: flex;
+  display: none;
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
